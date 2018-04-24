@@ -502,9 +502,10 @@ a.spin:active{
 
 .color-bar img {
 	position: absolute;
-	bottom: -100px;
-	right: 15%;
-	width: 700px;
+	bottom: -110px;
+	/* right: 15%; */
+	width: 650px;
+	right: 0;
 	height: auto;
 }
 
@@ -545,4 +546,20 @@ a.spin:active{
 	top: 180px;
 	line-height: 40px;
 	padding-bottom: 5rem;
+}
+
+#ia {
+	position: relative;
+	margin-top: 75px;
+}
+
+.lofi-cont {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lofi-ex {
+	padding: .25em;
+	width: 25%;
+	height: 25%;
 }
