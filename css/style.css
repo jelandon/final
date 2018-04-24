@@ -1,5 +1,5 @@
 * {
-	font-family: 'cabin';
+	font-family: 'raleway';
 	-webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
       -ms-box-sizing: border-box;
@@ -7,7 +7,8 @@
 }
 
 html{
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
+	font-size: 20px;
 }
 
 body {
@@ -23,19 +24,33 @@ header {
 	width: 100%;
 }
 
+header.work {
+	background-color: #008A23;
+
+}
+
+header.about{
+	background-color: #D41547;
+
+}
+
+header.axiom {
+	background-color: white;
+}
+
 header a#logo {
 	height: 100px;
 	width: 100px;
 }
 
-#logo img {
+#logo svg {
 	padding: 10px;
 	margin-left: 15px;
 	opacity: 1;
 	transition: all .3s ease-out;
 }
 
-#logo img:hover {
+#logo svg:hover {
 	opacity: .75
 }
 
@@ -47,11 +62,22 @@ header li {
 
 header li a {
 	color: white;
-	font-weight: 300;
+	font-weight: 600;
 	font-size: 1rem;
 	text-decoration: none;
 	opacity: 1;
 	transition: all .3s ease-out;
+}
+
+.svg {
+	fill: white;
+}
+
+.axiom .svg{
+	fill: #002E5F;
+}
+header.axiom li a {
+	color: #002E5F;
 }
 
 header li a:hover{
@@ -60,7 +86,6 @@ header li a:hover{
 
 header li a.email {
 	font-size: 1rem;
-	font-weight: 300;
 	text-decoration: underline;
 
 }
@@ -80,21 +105,27 @@ main{
 
 
 h1 {
-	font-size: 2.5em;
+	font-size: 3.5em;
 	text-align:left;
 	-webkit-margin-after: 0;
 	-webkit-margin-before: 0;
-	padding: 2rem 0 1.5rem 0;;
+	padding: 2rem 0 1.5rem 0;
 }
 h2 {
 	font-size:1.5em;
+	-webkit-margin-after: 0;
+	-webkit-margin-before: 0;
 }
 h2 b {
 	padding-right: 10px;
 	color: #F31431;
 }
 
-
+p {
+	-webkit-margin-after: 0;
+	-webkit-margin-before: 0;
+	font-size: 19px;
+}
 
 
 
@@ -140,7 +171,8 @@ h2 b {
 	left: 0;
 	pointer-events: none;
 	background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 66%);
-	width: 100%;
+	width: 150%;
+	max-width: 720px;
 	height: 4em;
 }
 #slots:before {
@@ -151,7 +183,8 @@ h2 b {
 	left: 0;
 	pointer-events: none;
 	background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255, 1) 66%);
-	width: 100%;
+	width: 150%;
+	max-width: 720px;
 	height: 4em;
 }
 .slot-bar{
@@ -271,7 +304,7 @@ h2 b {
 	-ms-transform-origin: 0 0;
 	-webkit-transform-origin: 0 0;
 	transform-origin: 0 0;
-	font-size: 2em;
+	font-size: 1.75em;
 	/* width: 12em; */
 }
 
@@ -295,7 +328,7 @@ a.spin {
 	text-decoration: none;
 	border: none;
 	top: 0;
-	font-weight: 900;
+	font-weight: 700;
 	text-shadow: 0 2px 1px rgba(0,0,0,.5);
 	box-shadow: 0 8px 0 rgb(0, 96, 128),
 	0 15px 20px rgba(0,0,0,.35);
@@ -304,6 +337,7 @@ a.spin {
 	cursor: pointer;
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	z-index: 11;
 }
 
 a.spin:active{
@@ -336,7 +370,9 @@ a.spin:active{
 	border-top: 12px solid white;
   }
 
-
+/* h3 {
+	font-family: 'Quando', sans-serif;
+} */
 
 
 
@@ -347,6 +383,11 @@ a.spin:active{
 	margin: 0 auto;
 	text-align: center;
 	padding: 1em;
+}
+
+#recent h1 {
+	color: #008A23;
+
 }
 
 .ex-flex {
@@ -390,6 +431,7 @@ a.spin:active{
 	margin: 0;
 	opacity: 0;
 	padding: 1em 0;
+	font-family: 'quando', sans-serif;
 	transition: all .3s ease-out;
 	background-color: rgba(0,0,0,.5)
 }
@@ -401,4 +443,106 @@ a.spin:active{
 .example:hover h4 span {
 	display: block;
 	font-size: .66rem;
+}
+
+
+
+#about{
+	/* padding: 0 1em; */
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1em;
+}
+
+#about h1 {
+	color: #D41547;
+}
+.about-flex {
+	display: flex;
+	justify-content: space-between;
+}
+.surreal {
+	width: 100%;
+	height: 354px;
+	max-width: 960px;
+    background-image: url("../images/surreal.gif");
+    background-size: 100%;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+}
+.about-flex p{
+	width: 70%;
+	text-align: left;
+	padding-left: 2rem;
+	line-height: 30px;
+}
+
+#axiom{
+	/* padding: 0 1em; */
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1em;
+}
+
+#axiom h1 {
+	color: #002E5F;
+}
+
+#axiom .color-bar {
+	background-color: #002E5F;
+	width: 100vw;
+	height: 150px;
+	position: absolute;
+	left: 0;
+}
+
+.color-bar img {
+	position: absolute;
+	bottom: -100px;
+	right: 15%;
+	width: 700px;
+	height: auto;
+}
+
+#axiom p.subhead {
+	text-align: left;
+	width: 30rem;
+	padding-bottom: 5rem;
+}
+
+#axiom h5 {
+	position: relative;
+	top: 175px;
+	text-align: left;
+	-webkit-margin-after: 0;
+	-webkit-margin-before: 0;
+	font-size: 3em;
+	font-variant: all-small-caps;
+	color: #002E5F;
+	font-weight: 700;
+
+}
+#axiom h6 {
+	position: relative;
+	top: 175px;
+	-webkit-margin-after: 0;
+	-webkit-margin-before: 0;
+	text-align: left;
+	font-size: 1em;
+	/* color: #002E5F; */
+	font-weight: 600;
+	font-family: 'Quando', sans-serif;
+	margin-bottom: 1.5rem;
+}
+
+#axiom p.role {
+	position: relative;
+	text-align: left;
+	top: 180px;
+	line-height: 40px;
+	padding-bottom: 5rem;
 }
